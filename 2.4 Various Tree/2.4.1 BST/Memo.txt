@@ -1,0 +1,26 @@
+2.4.1 BST
+
+-It's the common shape generally used.
+
+<feature>
+1. Left child node value <= Current node value <= Right child node value
+2. So, when it compares the value to search the element, the range reduces half each times. [But it is different by shape of bst]
+
+3. In case of "Complete Binary node" (Except the last level, nodes of every level have 2 child),
+Time Complexity :
+    insert and search O(log n)
+
+
+
+<Deletion>
+-It's pretty complex because to sustain the shape of BST, we have to find adequate node to replace existing one.
+-3 Cases:
+    1) No child : just delete
+    2) one child : delete and link parent's ptr to child of deleted
+    3) 2 child : after deletion, replace to "Successor" 
+
+-Successor : The smallest among bigger group [The smallest val of RIGHT SUBTREE]
+
+
+<Time Complexity>
+-It's not always O(log n)
