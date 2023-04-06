@@ -31,3 +31,4 @@ Time Complexity :
 2.4.5 N-ary Tree
 -Each node can have "N" children.
 -In-use example : Computer File System structure, Compiler(Abstract Syntax Tree)
+.
