@@ -23,4 +23,11 @@ Time Complexity :
 
 
 <Time Complexity>
--It's not always O(log n)
+-It's different by shape of tree.
+-To optimize the time, tree's height must be optimized. -> Optimized tree : "Height-balance BST"
+
+
+
+2.4.5 N-ary Tree
+-Each node can have "N" children.
+-In-use example : Computer File System structure, Compiler(Abstract Syntax Tree)

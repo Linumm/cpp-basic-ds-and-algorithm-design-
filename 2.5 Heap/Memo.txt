@@ -1,0 +1,39 @@
+2.5 HEAP
+
+-We can access pretty fast to the biggest or smallest element in container. (Not to both)
+
+<Time Complexity>
+-Heap requires following TC
+-Access : O(1)
+-Insertion : O(log N)
+-Deletion : O(log N)
+
+->so Tree structure is required, especially "Complete Binary Tree"
+[Except last level nodes, every node has 2 children and in last level, nodes should be located from left]
+
+-CBT is quite useful since we can use array to save CBT data.
+    1) Root node's data to idx 0
+    2) and rest, all nodes get index from left to right. [2i+1 or 2i+2]
+
+
+<Heap's Invariants>
+1. It must be immediate accessible to "Maximum element". ->Maximum element must be fixed in root pos.
+    this kind of heap : Max heap
+2. Min heap : to immediately access to "Minimum element". 
+3. It must sustain the "shape" of tree.
+
+
+<Insertion>
+1. As it's Complete Binary tree, new element can be added at last idx of array.
+2. But to require invariants of heap, new one has to be compared with other nodes. <Swap>
+3. This swap process takes time, which follows CBT's height log N. => O(log N)
+
+<Deletion>
+1. In heap, only the Maximum element can be deleted (we can't access directly to other element)
+2. So delete Root node first, and replace with tree's last node.
+3. and by comparing value, take a process of swap. =? O(log N)
+
+<Initialization>
+1. by invariant, initializing is not easy.
+2. Simple solution is just by inserting one by one in empty heap. -> O(Nlog N)
+3. There's "Heapifcation Algorithm" with O(N)    [In c++, std::make_heap()]
