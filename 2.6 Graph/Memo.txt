@@ -1,0 +1,38 @@
+2.6 GRAPH
+
+-Graph has not only the node's data, but also the "edge data" between nodes.
+
+-If there's no "weight" in edge, it is called "Unweighted graph", if so, "Weighted Graph"
+
+-If edge is two way -> undirected graph, 
+ if edge is one way -> directed graph
+    if I want to express two way on directed graph, there needs two edges.
+
+-There can be several way from the one edge to the other edge.
+->So there needs "unique Identification" for each node.
+
+-To express graph, tree is not only the answer. We can also use "STL container"
+
+--------------------------------------------------------------
+<2.6.1 Graph by "Adjacency Matrix">
+-let N: the number of nodes,
+ then this graph can be expressed by "N*N" 2d array.
+
+-In this array, the element means weight of edge.
+ ex) data[1][2] : weight of edge which links node '1' and '2'.
+
+-If the number of node is "V", it will use "V*V" size of memory
+ memory usage is increased highly of N*N
+
+-even if there's no linkage between two nodes, edge info should be saved.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+<2.6.3 Graph by "Adjacency List">
+-We can express by only saving unique ID of nodes which is connected directly.
+
+-It also use a 2d vector, but the size of inner vector: the num of nodes which is connected to current node (Not the num of entire)
+-so it will use E*constant size of memory
+
+
