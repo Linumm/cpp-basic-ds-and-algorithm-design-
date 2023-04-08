@@ -1,0 +1,33 @@
+III. HASH TABLE
+
+<Def>
+1. Lookup: Task of searching specific "value" in container, or the existence of that key
+2. Hashing : Express each data as a unique "hash value" and use that to search the existence of data or the original data.
+3. Hash function : return the unique "hash value" from given data.
+4. Collision : the case that other data(keys) can get same hash value
+
+
+<3.2>
+-Simple Example of Hash func is "Modulo function" (using the concept of math's Module)
+
+-Modulo function : return  "given_data % defined Integer N" -> use array size of N
+ -> collision (7%4 == 3%4)
+
+
+<3.3 Collision in Hash table>
+-One way to avoid collision is "CHAINING"
+
+-Chaining:
+    1) Not a key, saving a "linked list"
+    2) If collision happens, add a new key at Last node of list.
+    3) Time Complexity
+        >Insertion : O(1)
+        >Lookup and Deletetion : It can be pretty slow by the data and hash table size.
+            (if all key have same hash value, it becomes "linear search")
+    
+    4) If hash table is too small, then list size gets bigger / if hash table is too big, then there can be memory waste.
+
+
+-Load Factor = entire num of key / size of hash table
+    1) if lf == 1, num of key == size of hash table ->Ideal case
+    2) if lf < 1, there can be memory waste.
