@@ -31,3 +31,43 @@ III. HASH TABLE
 -Load Factor = entire num of key / size of hash table
     1) if lf == 1, num of key == size of hash table ->Ideal case
     2) if lf < 1, there can be memory waste.
++ Some hash table "rehash" if the load factor get too bigger or too smaller
+
+
+-Basically, making the difference between the max size of bucket and the min size of bucket small is good.
+    ->this means each keys are distributed well.
+
+
+=====================================================
+<3.3.3 Open Addressing>
+-def : not adding any list in table, just put all of keys in one hash table. (so no hash key duplication)
+       if hash value is already in use, then search other empty hash value. then how about search?
+
+1. Linear probing : move one by one until the hash value is empty to fill.
+    -There can happen "Clustering(군집화)" : crowded around specific one hash value
+    ->This happens when one specific hash value is returned frequently.
+    ->this will make speed slow.
+
+
+2. Quadratic probing : move quadratically [x+1^2, x+2^2, x+3^3]
+    -this will reduce the probability of Clustering
+
+====================================================
+<3.3.4 Cuckoo Hashing>
+-def : there're "2" hash tables, and the element can be in one of them.
+       and those elements can be moved to the other. 
+
+-If there's already key in hash value, move it to other. (this will be repeated recursively until existing one gets adequate empty hash value)
+    -> this "cycle" can happen infinitely, but there's well-hash function
+
+-This method can't save more than it's size, so make its "Load factor < 0.5" is recommeneded.
+
+====================================================
+<3.4 C++ Hash table>
+-C++ provide two STL hash table with template (general)
+ : std::unordered_set<key>  /  std::unordered_map<key, value>
+
+-Both, use "CHaining", and each one row (the start point of list) is called "bucket".
+-Basically, Load factor of these two : 1
+    >if lf > 1, automatically resize table and rehashing
+    >but user also can change max Lf by using "max_load_factor(float)"
