@@ -71,3 +71,22 @@ III. HASH TABLE
 -Basically, Load factor of these two : 1
     >if lf > 1, automatically resize table and rehashing
     >but user also can change max Lf by using "max_load_factor(float)"
+
+====================================================
+<3.5 Bloom Filter>
+-It is "not deterministic" 
+    1) it doesnt give "false-negative", but give "false-positive"
+    2) that means, if I get false, filter sure it does not exist definitely but if true, it can exist or does not exist.
+
+-this use boolean type array.
+
+-then why is it undeterministic?
+    -1) Because it does not use "single" hash function, use at least 3.
+        so after taking several hash function, one element can get several hash value, so there happpens value sharing.
+    -2) but if none get 1, it is surely 0, means does not exist.
+
+-if at least one hash value from key is 0, then returns "false" [so, hash values take AND gates in lookup process]
+
+-Bloom filter does not contain data itself, so it can accept diverse data type (even mixed!)
+
+-Example : Email address duplication checking 
