@@ -89,4 +89,6 @@ III. HASH TABLE
 
 -Bloom filter does not contain data itself, so it can accept diverse data type (even mixed!)
 
+-Deletion cannot be executed in bloom filter! as it can affect to other existence of other keys!
+
 -Example : Email address duplication checking 
