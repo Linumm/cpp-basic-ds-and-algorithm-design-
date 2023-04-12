@@ -1,0 +1,13 @@
+IV. DIVIDE AND CONQUER
+
+-if the problem can be solved with polynomial-time algorithm, then it is called "Class P"
+ there're other things
+    -NP(non-deterministic polynomial time) : it can be proved in p time but there're no known solution
+    -EXPTIME(exponential time)
+    -PSPACE(polynomial space)
+
+
+<4.2 Binary Search>
+-If the given sequence is well-sorted, then we can use binary Search
+-Simply, get the median of sequence, and compare. repeat this until the target is found.
+
