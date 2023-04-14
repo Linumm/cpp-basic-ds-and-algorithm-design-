@@ -11,3 +11,17 @@ IV. DIVIDE AND CONQUER
 -If the given sequence is well-sorted, then we can use binary Search
 -Simply, get the median of sequence, and compare. repeat this until the target is found.
 
+
+<4.3>
+-Divide : Divide to several sub problem that can be solved in same way
+-Conquer : get an answer
+-Combine : combine answers from sub problem to get a solution
+
+
+<4.4 Sorting algorithm with Divide-and-Conquer>
+-The requirement to Sort algorithm
+    1) General to all data type
+    2) Handle huge amount of data (even more than computer's main memory)
+    3) Speed (Time complexity)
+
+
