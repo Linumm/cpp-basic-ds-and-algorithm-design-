@@ -25,3 +25,15 @@ IV. DIVIDE AND CONQUER
     3) Speed (Time complexity)
 
 
+<4.4.3 Quick Sort>
+-Goal of quick sort is to reduce average time complexity.
+-Its basic idea is same with Merge sort, but the point is "dividing"
+    1) Set one random element as a "pivot"
+    2) Divide to two vectors, Left one is same or smaller than pivot element and right one is bigger than pivot.
+
+-Time, can be different by how to choose pivot.
+    1) if pivot value is not close to median, then divided vectors' size must be unbalanced -> recursion tree getting deeper -> time consume up
+
+-Time complexity[Merge, Quick]:
+    1) Best case : O(nlogn), O(nlogn)
+    2) Worst case : OM(nlogn), OM(n^2)
