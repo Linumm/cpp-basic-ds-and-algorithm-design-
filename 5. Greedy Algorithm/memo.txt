@@ -1,0 +1,8 @@
+V. GREEDY ALGORITHM
+
+<5.2 Basic Greedy Algorithm>
+-Shortest-job-first Scheduling : To make entire average time in wait, the shortest time-consume tasks goes in first
+    1) Since the shortest job is on first, the later jobs' waiting time get decreased
+    2) There can happen "Starvation" which means two long-time jobs cannot be done by once
+    3) It is rare case because it is unusual to know each job's time-consume
+    4)  
