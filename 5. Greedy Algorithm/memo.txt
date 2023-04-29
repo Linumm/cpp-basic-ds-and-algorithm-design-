@@ -5,4 +5,11 @@ V. GREEDY ALGORITHM
     1) Since the shortest job is on first, the later jobs' waiting time get decreased
     2) There can happen "Starvation" which means two long-time jobs cannot be done by once
     3) It is rare case because it is unusual to know each job's time-consume
-    4)  
+
+
+<5.3 Knapsack Problem>
+- Optimal Combination problem
+- 0-1 Knapsack problem / Fraction Knapsack problem
+- 0-1 kp is known as NP-complete.
+- Fraction one can be solved with Greedy way
+    1) get (value per same standard amount)
