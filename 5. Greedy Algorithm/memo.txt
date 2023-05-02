@@ -13,3 +13,28 @@ V. GREEDY ALGORITHM
 - 0-1 kp is known as NP-complete.
 - Fraction one can be solved with Greedy way
     1) get (value per same standard amount)
+
+
+<5.3.5 Requirements of Greedy Algorithm>
+-We can get the optimal solution only if the problem has "optimal substructure" and "greedy choice" feature.
+    > Optimal Substructure : when given P's optimal solution is consist of the optimal solution of P's subproblem
+    > Greedy Choice : For given P, if we can get P's solution by repeatedly choosing local optimal solution,
+
+
+<5.3.6 Minimum Spanning Tree>
+- for given G = <V, E>, make a tree which links every vertex with a minimum sum of edge weights
+- Kruskal's minimum spanning tree algorithm
+    1) Add every edge of G to Min Heap "H"
+    2) pop 'e' from H (it's the smallest one) until H is empty
+    3) if e's two vertexes are already in T, delete it and go back to (2) [to prevent cycle]
+    4) else, add e to Tree, go back to (2)
+
+
+<5.3.7 Disjoint-Set structure>
+-It is "Forest" consist of elements like tree
+-each element is expressed with unique ID, and has Rank and Pointer to parent
+-when it is initialized, there're N number of each elements with Rank 0
+    1) make-set(x): add element with ID x, Rank 0, Pointer pointing itself
+    2) find(x): from x, find final parent(root) and return
+    3) union(x, y): first, find root of 'x' and 'y', if it is from same root, stop. else, make element with higher rank as a parent of the other.
+
