@@ -38,3 +38,7 @@ V. GREEDY ALGORITHM
     2) find(x): from x, find final parent(root) and return
     3) union(x, y): first, find root of 'x' and 'y', if it is from same root, stop. else, make element with higher rank as a parent of the other.
 
+
+<5.4 Graph Coloring>
+-Optimal graph coloring is NP-complete, but greedy way provides quite approximate result
+-used in : sudoku puzzle, assigning cpu register in varaible of program in compile
