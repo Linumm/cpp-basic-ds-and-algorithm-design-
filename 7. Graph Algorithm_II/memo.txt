@@ -1,0 +1,23 @@
+<7.3 Bellman-Ford Algorithm>
+-In the case of negative weight edge, Dijkstra cannot be used.
+-
+
+
+<7.6 Strongly Connected Component>
+-def: set of vertices following
+    1) A cycle exists in each SCC
+    2) But no cycle between the SCC and the other SCC (one-directed between components)
+
+
+<7.7 Kosaraju Algorithm>
+-To find SCC in graph
+-Usually use DFS (but BFS is also possible method)
+
+-Transpose : Graph of (transposed between src and dst vertices)
+-method:
+    1) DFS traversal in non-visited vertices
+    2) in dfs, after finishing searching neighbors, save current vertex in stack.
+    3) AFter finishing dfs in original, now try dfs traversal in "Transposed" graph.
+    4) Pop one vertex from 'stack', if not visited yet, try DFS from it.
+    5) Some joint vertices compose SCC from each DFS
+    
