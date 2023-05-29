@@ -1,0 +1,14 @@
+<존슨 알고리즘>
+-모든 정점에 대해 나머지 모든 정점까지의 최단 거리 계산
+-이 때 음수 가중치가 있어도 상관 없게끔 고안됨
+
+-방법
+    1: Dummy vertex("s") 추가
+    2: 해당 dummy와 나머지 모든 vertex에 대해 weight 0인 edge 추가
+    3: Bellman-Ford로 dummy 정점과 나머지 모든 vertex의 최단 경로 찾고, 그 최단거리 기록
+       ㄴ해당 dist 값은 음수일 수도 있음. 다른 경로를 통해 올 수 있으므로
+    4: 그 dist 값들로 Reweighting (아래식 참조) -> 이 때 모든 weight >= 0 을 만족하게 됨
+    5: 새로운 weight로 dijkstra
+    6: 나중에 거리값 reversing 해주면 됨
+
+    <> W(uv) = w(uv) + d[s,u] - d[s,v] -> 
